@@ -4,14 +4,14 @@ import "./App.css";
 const audio = new Audio("http://taira-komori.jpn.org/sound/game01/coin01.mp3");
 
 function App() {
-  const [count, setCount] = useState(30);
+  const [count, setCount] = useState(10);
 
   useState(() => {
     const timer = setInterval(() => {
       setCount((prevCount) => {
         if (prevCount <= 1) {
           audio.play();
-          return 30; // Reset to 30 when reaching 0
+          return 10; // Reset to 30 when reaching 0
         }
         return prevCount - 1;
       });
